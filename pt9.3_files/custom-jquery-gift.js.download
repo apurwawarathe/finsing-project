@@ -1,0 +1,60 @@
+'use strict';jQuery(document).ready(function($){if(jQuery("html").find('.it-gift-products-table').length>0&&jQuery.fn.DataTable){jQuery('.it-gift-products-table').DataTable({"ordering":false,"bDestroy":true,"language":{"search":pw_wc_gift_adv_ajax.language_search,"info":pw_wc_gift_adv_ajax.language_info,"paginate":{"first":pw_wc_gift_adv_ajax.language_first,"previous":pw_wc_gift_adv_ajax.language_previous,"next":pw_wc_gift_adv_ajax.language_next,"last":pw_wc_gift_adv_ajax.language_last},}});jQuery('.scrollbar-macosx').scrollbar();}
+jQuery(document.body).on('updated_cart_totals',function(){if(jQuery("html").find('.it-gift-products-table').length>0&&jQuery.fn.DataTable){jQuery('.it-gift-products-table').DataTable({"ordering":false,"bDestroy":true});}});if(jQuery("html").find('#wgb-gift-products-dropdown').length>0){jQuery("#wgb-gift-products-dropdown").ddslick({selectText:pw_wc_gift_adv_ajax.language_select_your_gift,imagePosition:"left",onSelected:function(data){if(data.selectedData&&data.selectedData!=''){AjaxCall_addToCart(data.selectedData.value);}}});}
+jQuery(document.body).on('updated_cart_totals',function(){if(jQuery("html").find('#wgb-gift-products-dropdown').length>0){jQuery("#wgb-gift-products-dropdown").ddslick("destroy");jQuery("#wgb-gift-products-dropdown").ddslick({imagePosition:"left",selectText:pw_wc_gift_adv_ajax.language_select_your_gift,onSelected:function(data){if(data.selectedData&&data.selectedData!=''){AjaxCall_addToCart(data.selectedData.value);}}});}});jQuery(document).on("click",".btn-add-gift-button",function(e){jQuery(this).css({color:'transparent'});jQuery(".gift_cart_ajax").show();jQuery(this).find(".wgb-loading-icon").removeClass("wgb-d-none");e.preventDefault();var gift_id=jQuery(this).data("id");var qty=1;if(pw_wc_gift_adv_ajax.show_quantity=='true'){qty=jQuery(this).parent().find(".qty").find(".input-text").val();}
+AjaxCall_addToCart(gift_id,qty);});function AjaxCall_addToCart(gift_id,qty=1){if(''==gift_id){return false;}
+var url=pw_wc_gift_adv_ajax.add_to_cart_link;url=url.replace('%s',gift_id);url=url.replace('%q',qty);window.location.href=url;}
+jQuery(document).on("click",".btn-select-gift-button",function(e){e.preventDefault();jQuery(this).find(".wgb-loading-icon").removeClass("wgb-d-none");var show_html='<div id="wgb-modal" class="wgb-popup">'+
+'<div class="wgb-page wgb-popup-box">'+
+'<div class="wgb-popup-header">'+
+'<h3 class="wgb-popup-title">'+pw_wc_gift_adv_ajax.language_select_gift+'</h3>'+
+'<button type="button" class="wgb-popup-close"><i class="dashicons dashicons-no-alt"></i></button>'+
+'</div>'+
+'<div class="wgb-popup-body">'+
+'<div class="wgb-popup-content">'+
+'<div class="wgb-popup-posts"></div>'+
+'</div>'+
+'</div>'+
+'</div>'+
+'</div>';$('body').append(show_html);$("#wgb-modal").css("display","block");$.ajax({url:pw_wc_gift_adv_ajax.ajaxurl,type:"POST",data:{action:pw_wc_gift_adv_ajax.action_show_variation,pw_gift_variable:jQuery(this).data("id"),pw_gift_uid:jQuery(this).data("rule-id"),security:pw_wc_gift_adv_ajax.security,},success:function(resp){$(".wgb-popup-posts").html(resp);$('body').addClass('modal-opened');$('.wgb-popup-box').addClass('wgb-page-scaleUp');$('.wgb-popup-box').addClass('wgb-page-current');$('.wgb-popup').addClass('wgb-active-modal');jQuery('.scrollbar-macosx').scrollbar();},error:function(){}});$(document).keyup(function(e){if(e.key==="Escape"){$('.wgb-popup-close').trigger("click");}});});jQuery(document).on("click",".btn-select-gift-popup-button",function(e){e.preventDefault();var show_html='<div id="wgb-modal" class="wgb-popup">'+
+'<div class="wgb-page wgb-popup-box">'+
+'<div class="wgb-popup-header">'+
+'<h3 class="wgb-popup-title">'+pw_wc_gift_adv_ajax.language_select_gift+'</h3>'+
+'<button type="button" class="wgb-popup-close"><i class="dashicons dashicons-no-alt"></i></button>'+
+'</div>'+
+'<div class="wgb-popup-body">'+
+'<div class="wgb-popup-content">'+
+'<div class="wgb-popup-posts"></div>'+
+'</div>'+
+'</div>'+
+'</div>'+
+'</div>';$('body').append(show_html);$("#wgb-modal").css("display","block");$.ajax({url:pw_wc_gift_adv_ajax.ajaxurl,type:"POST",data:{action:pw_wc_gift_adv_ajax.action_gift_show_popup_checkout,security:pw_wc_gift_adv_ajax.security,},success:function(resp){$(".wgb-popup-posts").html(resp);$('body').addClass('modal-opened');$('.wgb-popup-box').addClass('wgb-page-scaleUp');$('.wgb-popup-box').addClass('wgb-page-current');$('.wgb-popup').addClass('wgb-active-modal');jQuery('.scrollbar-macosx').scrollbar();},error:function(){}});$(document).keyup(function(e){if(e.key==="Escape"){$('.wgb-popup-close').trigger("click");}});});jQuery(document).on('click','.wgb-popup-close',function(e){let modal=$(this).closest('.wgb-popup');$('.wgb-loading-icon').addClass('wgb-d-none');$('.wgb-popup-box').removeClass('wgb-page-scaleUp');$('.wgb-popup-box').addClass('wgb-page-scaleDownUp');setTimeout(function(){$('body').removeClass('modal-opened');modal.remove();},700)
+jQuery('.scrollbar-macosx').scrollbar('destroy');});jQuery(document).on("click",".btn_select_gift_in_coupon",function(e){e.preventDefault();jQuery(this).find(".wgb-loading-icon").removeClass("wgb-d-none");var show_html='<div id="wgb-modal" class="wgb-popup">'+
+'<div class="wgb-page wgb-popup-box ">'+
+'<div class="wgb-popup-body">'+
+'<div class="wgb-popup-close wgb-popup-close">'+
+'<div class="wgb-leftright"></div>'+
+'<div class="wgb-rightleft"></div>'+
+'</div>'+
+'<div class="wgb-modal-cnt scrollbar-macosx wgb-popup-content wgb-row" ></div>'+
+'</div>'+
+'</div>'+
+'</div>';$('body').append(show_html);$("#wgb-modal").css("display","block");var pdata={action:pw_wc_gift_adv_ajax.action_display_gifts_in_popup,security:pw_wc_gift_adv_ajax.security,}
+$.ajax({type:"POST",url:pw_wc_gift_adv_ajax.ajaxurl,data:pdata,success:function(resp){$(".wgb-popup-posts").html(resp);$('body').addClass('modal-opened');$('.wgb-popup-box').addClass('wgb-page-scaleUp');$('.wgb-popup-box').addClass('wgb-page-current');$('.wgb-popup').addClass('wgb-active-modal');jQuery('.scrollbar-macosx').scrollbar();}});$(document).keyup(function(e){if(e.key==="Escape"){$('.wgb-popup-close').trigger("click");}});});if(jQuery("html").find('.itg-auto-show-popup').length>0){var show_html='<div id="wgb-modal" class="wgb-popup">'+
+'<div class="wgb-page wgb-popup-box">'+
+'<div class="wgb-popup-header">'+
+'<h3 class="wgb-popup-title">'+pw_wc_gift_adv_ajax.language_select_gift+'</h3>'+
+'<button type="button" class="wgb-popup-close"><i class="dashicons dashicons-no-alt"></i></button>'+
+'</div>'+
+'<div class="wgb-popup-body">'+
+'<div class="wgb-popup-content">'+
+'<div class="wgb-popup-posts"></div>'+
+'</div>'+
+'</div>'+
+'</div>'+
+'</div>';$('body').append(show_html);$("#wgb-modal").css("display","block");$.ajax({url:pw_wc_gift_adv_ajax.ajaxurl,type:"POST",data:{action:pw_wc_gift_adv_ajax.action_gift_show_popup_checkout,security:pw_wc_gift_adv_ajax.security,},success:function(resp){$(".wgb-popup-posts").html(resp);$('body').addClass('modal-opened');$('.wgb-popup-box').addClass('wgb-page-scaleUp');$('.wgb-popup-box').addClass('wgb-page-current');$('.wgb-popup').addClass('wgb-active-modal');jQuery('.scrollbar-macosx').scrollbar();},error:function(){}});$(document).keyup(function(e){if(e.key==="Escape"){$('.wgb-popup-close').trigger("click");}});}
+$(document).on('click','.wgb-qty-decrease-btn',function(){let input=$(this).closest('.qty').find('input[type="number"]');if(input.attr('min')&&parseInt(input.attr('min'))<parseInt(input.val())){input.val(parseInt(input.val())-1);}});$(document).on('click','.wgb-qty-increase-btn',function(){let input=$(this).closest('.qty').find('input[type="number"]');if(input.attr('max')&&parseInt(input.attr('max'))>parseInt(input.val())){input.val(parseInt(input.val())+1);}});});function paginationInit(targetElement,currentPage,maxNumPages){let maxDisplay=3;targetElement.html('');if(currentPage<maxDisplay){for(let i=1;i<=Math.min(parseInt(maxDisplay),parseInt(maxNumPages));i++){let active=(parseInt(currentPage)==i)?'wgb-active-page':'';targetElement.append("<a href='javascript:;' class='pw_gift_pagination_num "+active+"' data-page-id='page_"+i+"'> "+i+" </a>");}
+if(maxNumPages>(parseInt(maxDisplay)+1)){targetElement.append("<span> ... </span>");}
+if(parseInt(currentPage)+2<=parseInt(maxNumPages)&&parseInt(maxNumPages)>parseInt(maxDisplay)){targetElement.append("<a href='javascript:;' class='pw_gift_pagination_num' data-page-id='page_"+maxNumPages+"'> "+maxNumPages+" </a>");}}else if(currentPage==maxDisplay){let maxNum=(maxDisplay<maxNumPages)?parseInt(maxDisplay)+1:maxDisplay;for(let i=1;i<=maxNum;i++){let active=(currentPage==i)?'wgb-active-page':'';targetElement.append("<a href='javascript:;' class='pw_gift_pagination_num "+active+"' data-page-id='page_"+i+"'> "+i+" </a>");}
+if(maxNumPages>(parseInt(currentPage)+1)){let active=(currentPage==maxNumPages)?'wgb-active-page':'';targetElement.append("<span> ... </span>");targetElement.append("<a href='javascript:;' class='pw_gift_pagination_num "+active+"' data-page-id='page_"+maxNumPages+"'> "+maxNumPages+" </a>");}}else{let active=(parseInt(currentPage)===1)?'wgb-active-page':'';targetElement.append("<a href='javascript:;' class='pw_gift_pagination_num "+active+"' data-page-id='page_1'>1</a>");if(parseInt(currentPage)>(parseInt(maxDisplay)+1)){targetElement.append("<span> ... </span>");}
+for(let i=parseInt(currentPage)-2;i<=Math.min(parseInt(currentPage)+2,parseInt(maxNumPages));i++){let active=(currentPage==i)?'wgb-active-page':'';targetElement.append("<a href='javascript:;' class='pw_gift_pagination_num "+active+"' data-page-id='page_"+i+"'> "+i+" </a>");}
+if(parseInt(currentPage)+2<parseInt(maxNumPages)){let active=(currentPage==maxNumPages)?'wgb-active-page':'';targetElement.append("<span> ... </span>");targetElement.append("<a href='javascript:;' class='pw_gift_pagination_num "+active+"' data-page-id='page_"+maxNumPages+"'> "+maxNumPages+" </a>");}}}

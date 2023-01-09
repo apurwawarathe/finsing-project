@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+body{
+  overflow-x: hidden;
+  background-color: blanchedalmond;
+}
+
+
+    .step1 nav{
+        background-color: cornflowerblue;
+   
+    }
+
+ul li{
+  float: right;
+} 
+
+
+   .navbar{ font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #e6e6ed;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+    color: midnightblue;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+
+
+
+
+ .step3 .navbar-nav.navbar-center {
+  background-color: dodgerblue;
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+            font-size: 12px;
+       font-weight: bold;
+          }
+
+       .step3 .navbar-nav li a:hover {
+    color:black !important;
+  }
+
+  .step3 .navbar-nav li.active a {
+    color:black !important;
+    background-color:palevioletred !important;
+  }
+  .step3 .dropdown-menu{
+    background-color:rgb(108, 180, 232) ;
+    color:rgb(63, 62, 62);
+    font-weight: bold;
+  }
+
+
+
+  #myformid{
+    border: 5px solid rgb(21, 108, 148);
+    width: 600px;
+    height: auto;
+    margin:auto;
+    padding: auto;
+  } 
+ 
+
+
+
+
+
+
+
+
+
+  /*  new arrivals */
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display:none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+
+.container1{
+    background-color:papayawhip;
+}
+
+.container2{
+    background-color: papayawhip;
+}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    font-size: 17px;
+  }
+  
+  .container {
+    position: relative;
+    
+    margin: 0 auto;
+  }
+  
+  .container img {vertical-align: middle;}
+  
+  .container .content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+
+
+
+
+  </style>
+
+<body><div class="step1">
+    <nav class="navbar ">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><marquee behavior="" direction="left to right" style="color: white;">🚚 JB - RM9.90 Delivery (FREE above RM150) | KL - RM9.90 Delivery (FREE above RM500) | SG - S$15 Delivery (PROMO FREE above S$120) | West Malaysia - RM28 Delivery 🚚 [ Find Out More ]</marquee></a>
+          </div>
+         
+        </div>
+      </nav>
+    </div>
+   
+<div class="step2">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="fish logo.png" alt="logo" height="auto" width="20%" class="img-responsive"> </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"  style="font-size: 30px; color: midnightblue;"></span></i></a> </li>  
+        <li><a href="#"><span class="glyphicon glyphicon-heart-empty" style="font-size: 30px ;color: midnightblue;"></span></i></a> </li>  
+<li> <form class="navbar-form"    action="/action_page.php">
+  <div class="form-group">
+    <li>  <input type="text" class="form-control" placeholder="Search"> <span class="glyphicon glyphicon-search"></span> </li>
+     
+      <li> <buttonSubmit type="submit" class="btn btn-default">Submit</button></li>
+     
+      <li>  <input  type="text" class="form-control" placeholder="Login"><span class="glyphicon glyphicon-user"></span></input></li>
+     
+    </div>
+    </form>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+    <!--NAVBAR STARTING 3-->
+
+<div class="step3">
+
+    <nav class="navbar navbar-expand-sm ">
+      <div class="container">
+          <a class="navbar-brand text-success" href="#">
+            <img src="fish logo.png" class="img-responsive" width="30px" height="auto" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" 
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" 
+               id="navbarSupportedContent">
+              <ul class=" nav navbar-nav navbar-center">
+                  <li class="nav-item">
+                      <a class="nav-link" 
+                         href="fish.html" style="color: rgb(206, 92, 21)">
+                        ANNIVERSARY SALE 
+                        <span class="sr-only">
+                          (current)
+                        </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" 
+                         href="bbq.html">
+                        BBQ
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" 
+                         href="new.html">
+                        NEW ARRIVALS
+                      </a>
+                  </li>
+
+
+                  <li class="drop-down">
+                    <a   class="dropdown-toggle" data-toggle="dropdown" 
+                       href="categories.html">
+                    CATEGORIES
+                    </a>
+
+                    <ul class="dropdown-menu">
+                     
+                      <li><a href="categories.html ">  Salmon & Trout </a></li>
+                      
+                      <li><a href="categories.html "> Seafood </a> </li>
+
+                        <li><a href="categories.html ">Chicken & poultry   
+    </a> </li> 
+                      <li><a href="categories.html">  Beef & Lamb </a></li> 
+                      
+                      <li><a href="categories.html ">  Pork </a></li> 
+                      <li><a href="categories.html ">Ready To Cook </a></li> 
+                      <li><a href="categories.html "> Local Delights  </a></li> 
+                      <li><a href="categories.html "> Bread & Pastry</a></li> 
+                      <li><a href="categories.html ">Sauce & Seasoning </a></li> 
+                      <li><a href="categories.html ">Fruits & Veggies </a></li> 
+                      <li><a href="categories.html ">Drink & Desserts </a></li> 
+                     
+                      </ul>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" 
+                     href="best.html">
+                    BEST SELLING
+                  </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" 
+                   href="popular.html">
+                  S G POPULAR PICS
+                </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" 
+                 href="fish2.html"  style="color: rgb(206, 92, 21);">
+                ALL PRODUCTS SALE
+              </a>
+          </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--sec 2-->
+
+ 
+  
+  <h2> Products On Sale</h2>
+  
+  <div class="container">
+    <img src="sale.png" alt="Notebook" class="img-responsive" width="100%" height="auto">
+    <div class="content">
+      <h1> Best Selling</h1>
+  </div>
+</div>
+    
+<div class="container1">
+    <h1 class="text-center" style="color: night blue;font-weight:bold;font-size:larger">Marked Down Corner</h1>
+
+
+     
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt3.1.png" alt="" style="width:100%;">
+          
+          <p class="price">RM 5.90 </p>
+         <p> CB Fish Ball with Cheese & Shrimp / 芝士蝦包心丸 160g (8pcs)
+         </p>
+    
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt3.2.jpeg" alt="" style="width:100%;">
+          
+          <p class="price">RM 8.40</p>
+         <p>AQINA Classic Chicken Soup / 经典香浓鸡汤 – 500ml [Expiry 16June22] </p>
+    
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt3.3.png" alt="" style="width:100%;">
+          
+          <p class="price">RM 61.60</p>
+         <p>CB Premium Seafood Combo / 鲍鱼山珍海味煲 – 350g </p>
+    <p></p>
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt3.4.png" alt="" style="width:100%;">
+          
+          <p class="price">RM 34.30 </p>
+         <p>CB Premium Mini Combo With Golden Soup/ 金汤迷你佛跳墙 – 350g
+           </p>
+    
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt3.5.jpg" alt="" style="width:100%;">
+          
+          <p class="price">RM 14.30</p>
+         <p>CB Salmon Cheese Ball / 芝士三文丸 – 500g
+           </p>
+    
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+  <br>
+  <br>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt4.1.png" alt="" style="width:100%;">
+          
+          <p class="price">RM 8.00 </p>
+         <p> CB Tempura Squid Rings / 日式墨鱼圈 – 300g
+          </p>
+  
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt4.2.jpg" alt="" style="width:100%;">
+          
+          <p class="price">  RM 44.90 – RM 59.90</p>
+         <p> ‘Fish Club Origins’ Antibiotic-Free Norwegian Rainbow Trout
+          </p>
+  
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt4.3.png" alt="" style="width:100%;">
+          <p class="price">RM  9.90 </p>
+          <p>Shrimp Paste / 虾滑 – 150g  </p>
+    
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt4.4.jpg" alt="" style="width:100%;">
+         
+          <p class="price">RM11.50 – RM15.90 </p>
+          <p> Aqina Pineapple Chicken / 黄梨酵素鸡 </p>
+            <p><button>Add to Cart</button></p>
+            
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt4.5.png" alt="" style="width:100%;">
+           
+          <p class="price">RM 8.50</p>
+         <p> Xiao Mei Famous Muar Fish Otak-Otak / 小妹麻坡鱼肉乌达 – 180g
+         </p>
+      <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt4.6.png" alt="" style="width:100%;">
+          <p class="price"> RM47.50 – RM52.50</p>
+         <p> Chilean Atlantic Salmon Fillet / 智利大西洋三文鱼厚片
+          </p>
+    <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="pt5.1.jpg" alt="" style="width:100%;">
+          
+         
+          <p>Octopus Horn String / 章鱼龙珠串 – 5pcs</p>
+         
+          
+          <p><button>Add to Cart</button></p>
+        
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <br>
+  <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+<div class="container">
+    <div class="row">
+     
+      <div class="col-sm-3">
+        <div class="row">
+          <h3>
+            CONTACT US
+          </h3>
+          <a href="https://api.whatsapp.com/send?phone=017-755 2874"> <img src="wha.jpg" width="20%" height="auto" alt=""> </a>
+  <p> 017-755 2874 </p>
+        </div>
+  
+        <div class="row">
+         <h3>Email</h3> 
+         <p>
+          fisherman@fishclub.com.my
+         </p>
+        </div>
+  
+        <div class="row">
+         <h3 > Customer Service</h3>
+          <p> 9am – 5pm (Mon to Sat)
+  *Except Public Holidays</p>
+        </div>
+  
+       
+      </div>
+  
+      <div class="col-sm-3">
+       
+        <div class="row">
+          <h3> COMPANY</h3>
+          About Fish Club
+        </div>
+  
+        <div class="row">
+          Career Opportunities
+          
+        </div>
+  
+        <div class="row">
+          Locate Us
+          
+        </div>
+  
+        <div class="row">
+          Get In Touch
+          
+        </div>
+  <br>
+  
+  <div class="row">
+    <h3 class="text-center">FOLLOW US</h3>
+   <img src="facebook-Instagram.jpg" alt="" class="img-responsive" width="20%" height="auto">  
+  </div>
+      </div>
+  
+      <div class="col-sm-3">
+       
+        <div class="row">
+          <h3> CUSTOMER CARE</h3>
+          Frequently Asked Questions
+        </div>
+  
+        <div class="row">
+          Terms & Conditions
+          
+        </div>
+  
+        <div class="row">
+          Privacy Policy
+          
+        </div>
+  
+        <div class="row">
+          Delivery Coverage
+          
+        </div>
+      </div>
+  
+      <div class="col-sm-3">
+        
+        <div class="row">
+          <h3>STORE LOCATIONS</h3>
+          📍 Pontian
+    </div>
+  
+        <div class="row">
+          📍 Horizon Hills
+          
+        </div>
+  
+        <div class="row">
+          📍 Taman Molek
+          
+        </div>
+  
+        <div class="row">
+          📍 Mutiara Rini
+          
+        </div>
+  
+        <div class="row">
+          📍 Eco Botanic
+          
+        </div>
+  
+       
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <div class="containerfootl">
+    <div class=" row" >
+      <div class="col-sm-6">
+  <p> Fish Club 2019</p>
+      </div>
+  
+      <div class="col-sm-6">
+        <p> Sea To Table Sdn. Bhd. (1237121-W)</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+ 
+        
+  </body>
+  </html>

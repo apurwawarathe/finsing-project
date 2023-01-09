@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+<style>
+
+body{
+  overflow-x: hidden;
+  background-color: blanchedalmond;
+}
+
+
+    .step1 nav{
+        background-color: cornflowerblue;
+   
+    }
+
+ul li{
+  float: right;
+} 
+
+
+   .navbar{ font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #e6e6ed;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+    color: midnightblue;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+
+
+
+
+ .step3 .navbar-nav.navbar-center {
+  background-color: dodgerblue;
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+            font-size: 12px;
+       font-weight: bold;
+          }
+
+       .step3 .navbar-nav li a:hover {
+    color:black !important;
+  }
+
+  .step3 .navbar-nav li.active a {
+    color:black !important;
+    background-color:palevioletred !important;
+  }
+  .step3 .dropdown-menu{
+    background-color:rgb(108, 180, 232) ;
+    color:rgb(63, 62, 62);
+    font-weight: bold;
+  }
+
+
+
+  #myformid{
+    border: 5px solid rgb(21, 108, 148);
+    width: 600px;
+    height: auto;
+    margin:auto;
+    padding: auto;
+  } 
+ /*  new arrivals */
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display:none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+
+.container1{
+    background-color:papayawhip;
+}
+
+.container2{
+    background-color: papayawhip;
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="step1">
+        <nav class="navbar ">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#"><marquee behavior="" direction="left to right" style="color: white;">🚚 JB - RM9.90 Delivery (FREE above RM150) | KL - RM9.90 Delivery (FREE above RM500) | SG - S$15 Delivery (PROMO FREE above S$120) | West Malaysia - RM28 Delivery 🚚 [ Find Out More ]</marquee></a>
+              </div>
+             
+            </div>
+          </nav>
+        </div>
+       
+    <div class="step2">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#"><img src="fish logo.png" alt="logo" height="auto" width="20%" class="img-responsive"> </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"  style="font-size: 30px; color: midnightblue;"></span></i></a> </li>  
+            <li><a href="#"><span class="glyphicon glyphicon-heart-empty" style="font-size: 30px ;color: midnightblue;"></span></i></a> </li>  
+    <li> <form class="navbar-form"    action="/action_page.php">
+      <div class="form-group">
+        <li>  <input type="text" class="form-control" placeholder="Search"> <span class="glyphicon glyphicon-search"></span> </li>
+         
+          <li> <buttonSubmit type="submit" class="btn btn-default">Submit</button></li>
+         
+          <li>  <input  type="text" class="form-control" placeholder="Login"><span class="glyphicon glyphicon-user"></span></input></li>
+         
+        </div>
+        </form>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    
+        <!--NAVBAR STARTING 3-->
+    
+    <div class="step3">
+    
+        <nav class="navbar navbar-expand-sm ">
+          <div class="container">
+              <a class="navbar-brand text-success" href="#">
+                <img src="fish logo.png" class="img-responsive" width="30px" height="auto" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" 
+                      data-toggle="collapse"
+                      data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false" 
+                      aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse" 
+                   id="navbarSupportedContent">
+                  <ul class=" nav navbar-nav navbar-center">
+                      <li class="nav-item">
+                          <a class="nav-link" 
+                             href="fish.html" style="color: rgb(206, 92, 21)">
+                            ANNIVERSARY SALE 
+                            <span class="sr-only">
+                              (current)
+                            </span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" 
+                             href="bbq.html">
+                            BBQ
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" 
+                             href="new.html">
+                            NEW ARRIVALS
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" 
+                           href="popularity.html">
+                          Popularity Graph
+                        </a>
+                    </li>
+    
+                      <li class="drop-down">
+                        <a   class="dropdown-toggle" data-toggle="dropdown" 
+                           href="categories.html">
+                        CATEGORIES
+                        </a>
+    
+                        <ul class="dropdown-menu">
+                         
+                          <li><a href="categories.html ">  Salmon & Trout </a></li>
+                          <li><a href="categories.html"> Seafood </a> </li>
+                          <li><a href=" categories.html">Chicken & poultry</a> </li> 
+                          <li><a href="categories.html ">  Beef & Lamb </a></li> 
+                          <li><a href="categories.html ">  Pork </a></li> 
+                          <li><a href="categories.html ">Ready To Cook </a></li> 
+                          <li><a href="categories.html "> Local Delights  </a></li> 
+                          <li><a href=" categories.html"> Bread & Pastry</a></li> 
+                          <li><a href="categories.html ">Sauce & Seasoning </a></li> 
+                          <li><a href=" categories.html">Fruits & Veggies </a></li> 
+                          <li><a href="categories.html ">Drink & Desserts </a></li> 
+                        
+                         
+                          </ul>
+                    </li>
+    
+                    <li class="nav-item">
+                      <a class="nav-link" 
+                         href="best.html">
+                        BEST SELLING
+                      </a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" 
+                       href="popular.html">
+                      S G POPULAR PICS
+                    </a>
+                </li>
+    
+                <li class="nav-item">
+                  <a class="nav-link" 
+                     href="fish2.html"  style="color: rgb(206, 92, 21);">
+                    ALL PRODUCTS SALE
+                  </a>
+              </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--sec 2-->
+    <div>
+        <img src="bbq.jpg" alt="" width="100%" height="auto" class="img-responsive">
+      </div>
+    
+<!--graph-->
+
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+</div>
+<div class="col-md-6">
+    <h2>
+        Malaysian Cuisine Is All About
+    </h2>
+    <br>
+    <br>
+<p>
+    Malaysian cuisine consists of cooking traditions and practices found in Malaysia, and reflects the multi-ethnic makeup of its population.[1] The vast majority of Malaysia's population can roughly be divided among three major ethnic groups: Malays, Chinese and Indians. The remainder consists of the indigenous peoples of Sabah and Sarawak in East Malaysia, the Orang Asli of Peninsular Malaysia, the Peranakan and Eurasian creole communities, as well as a significant number of foreign workers and expatriates.
+
+As a result of historical migrations, colonisation by foreign powers, and its geographical position within its wider home region, Malaysia's culinary style in the present day is primarily a melange of traditions from its Malay, Chinese, Indian, Indonesian, Filipino and indigenous Bornean and Orang Asli, with light to heavy influences from Arab, Thai, Portuguese, Dutch and British cuisines, to name a few. This resulted in a symphony of flavours, making Malaysian cuisine highly complex and diverse. The condiments, herbs and spices used in cooking vary.
+
+Because Peninsular Malaysia shares a common history with Singapore, it is common to find versions of the same dish across both sides of the border regardless of the place of origin, such as laksa and chicken rice. The same thing can be said with Malaysian Borneo and Brunei, such as Ambuyat. Also because of their proximity, historic migration and close ethnic and cultural kinship, Malaysia shares culinary ties with Indonesia, Thailand and the Philippines,[2] as these nations often share certain dishes, such as satay and rendang.
+
+Because the vast majority of Chinese Malaysians are descendants of immigrants from southern China, Malaysian Chinese cuisine is predominantly based on an eclectic repertoire of dishes with roots from Fujian, Teochew, Cantonese, Hakka and Hainanese cuisines.[3] However, despite the vast majority of Indian Malaysians are descendants of immigrants from southern India, Malaysian Indian cuisine has a mixture of north-south Indian and Sri Lankan diversity that can be differentiated by drier or wetter curry dish preparation.
+</p>
+</div> 
+</div> 
+</div>
+  
+    <script>
+      var xValues = ["Salmon & Trout", "Seafood", "Beaf & Lamb", "Pork", "Chicken & Poultry"];
+      var yValues = [55, 49, 44, 24, 15];
+      var barColors = ["red", "green","blue","orange","brown"];
+      
+      new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {
+          legend: {display: false},
+          title: {
+            display: true,
+            text: "Popularity of various food categories"
+          }
+        }
+      });
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
